@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".Finger">
 
     <TextView
@@ -24,6 +25,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="264dp"
         android:layout_marginEnd="8dp"
+        android:background="@color/btnColor"
         android:text="@string/finger"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
