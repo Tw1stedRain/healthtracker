@@ -2,36 +2,55 @@ package com.example.healthtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-        TextView numCounter;
-        Button countUp;
+        int[] pictures = {
+                R.drawable.ty,
+                R.drawable.fred,
+                R.drawable.cooper
+        };
 
-        int counter = 0;
+        String[] quotes = {
+                "You can do it?",
+                "I believe in you!",
+                "Work that phone!"
+        };
+
+        int currentPic = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        numCounter = findViewById(R.id.incrementor);
-        countUp = findViewById(R.id.countUp);
-
-        numCounter.setText("0");
-
-        countUp.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                counter = counter + 1;
-                numCounter.setText(String.valueOf(counter));
-            }
-        });
-
     }
+
+    public void onButtonClick(View view) {
+        ImageView image = findViewById(R.id.slider);
+        image.setImageResource(pictures[currentPic]);
+
+        TextView quote = findViewById(R.id.quotes);
+        quote.setText(quotes[currentPic]);
+
+
+        TextView text = findViewById(R.id.tracker);
+        text.setText(String.valueOf(currentPic+1 + "/3"));
+            currentPic++;
+        if (currentPic == pictures.length) {
+            currentPic = 0;
+        }
+    }
+
+    public void newPage(View view) {
+        Intent intent = new Intent(this, Finger.class);
+        startActivity(intent);
+    }
+
 
 }

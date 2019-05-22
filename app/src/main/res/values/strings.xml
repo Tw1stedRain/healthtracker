@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">healthTracker</string>
+    <string name="finger">WORK OUT THAT FINGER!!!!</string>
+    <string name="slider">Flip that Pic</string>
+    <string name="intent">To the Finger</string>
+    <string name="count">Click Count: 0</string>
 </resources>
