@@ -42,7 +42,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="28dp"
         android:background="@color/btnColor"
-        android:onClick="newPage"
+        android:onClick="fingerExercise"
         android:text="@string/intent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -72,6 +72,22 @@
         android:layout_marginBottom="8dp"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tracker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+    <Button
+        android:id="@+id/diary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/btnColor"
+        android:onClick="diary"
+        android:text="@string/diaryBtn"
+        app:layout_constraintBottom_toTopOf="@+id/newFinger"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
