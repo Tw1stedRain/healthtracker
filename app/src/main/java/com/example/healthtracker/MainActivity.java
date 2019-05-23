@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -47,8 +46,13 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void newPage(View view) {
-        Intent intent = new Intent(this, Finger.class);
+    public void fingerExercise(View view) {
+        Intent intent = new Intent(this, FingerActivity.class);
+        startActivity(intent);
+    }
+
+    public void diary(View view) {
+        Intent intent = new Intent(this, ExerciseDiaryActivity.class);
         startActivity(intent);
     }
 
