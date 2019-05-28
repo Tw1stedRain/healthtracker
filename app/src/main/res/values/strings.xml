@@ -2,6 +2,7 @@
     <!--in many places-->
     <string name="app_name">healthTracker</string>
     <string name="home">Home</string>
+    <string name="my_main_pref_file">my-file</string>
 
     <!--main activity-->
     <string name="slider">Flip that Pic</string>

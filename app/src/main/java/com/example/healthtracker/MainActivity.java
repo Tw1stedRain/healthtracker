@@ -2,7 +2,9 @@ package com.example.healthtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -24,12 +26,43 @@ public class MainActivity extends AppCompatActivity {
 
         int currentPic = 0;
 
+        private TextView text;
+
+        private String name;
+
+        public final static String NAME_KEY = "user-name";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        text = findViewById(R.id.text_name);
+
+        String filename = getString(R.string.my_main_pref_file);
+        SharedPreferences preferences = getSharedPreferences(filename, Context.MODE_PRIVATE);
+        name = preferences.getString(NAME_KEY, "New User!");
+
+        updateText();
     }
 
+    public void usernameClick(View view) {
+
+        SharedPreferences preferences = PreferencesHelper.getMyFilePreferences(this);
+
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.putString(NAME_KEY, name);
+        editor.apply();
+        updateText();
+
+    }
+
+    private void updateText() {
+        text.setText(this.name);
+    }
+
+
+    // buttons
     public void onButtonClick(View view) {
         ImageView image = findViewById(R.id.slider);
         image.setImageResource(pictures[currentPic]);
@@ -46,6 +79,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // navigation buttons
     public void fingerExercise(View view) {
         Intent intent = new Intent(this, FingerActivity.class);
         startActivity(intent);
