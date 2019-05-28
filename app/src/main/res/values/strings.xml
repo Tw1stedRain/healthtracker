@@ -1,9 +1,23 @@
 <resources>
+    <!--in many places-->
     <string name="app_name">healthTracker</string>
-    <string name="finger">WORK OUT THAT FINGER!!!!</string>
+    <string name="home">Home</string>
+    <string name="my_main_pref_file">my-file</string>
+
+    <!--main activity-->
     <string name="slider">Flip that Pic</string>
     <string name="intent">To the Finger</string>
-    <string name="count">Click Count: 0</string>
     <string name="sliderDescription">Slider of cats</string>
+    <string name="diaryBtn">Exercise Diary</string>
 
+    <!--finger activity-->
+    <string name="finger">WORK OUT THAT FINGER!!!!</string>
+    <string name="count">Click Count: 0</string>
+
+    <!--diary activity-->
+    <string name="title">Exercise Title</string>
+    <string name="reps">Number of Reps</string>
+    <string name="description">Description</string>
+    <string name="time">Occurred On</string>
+    <string name="newExercise">Record New Exercise</string>
 </resources>
