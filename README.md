@@ -24,3 +24,20 @@
  * Created a new page w/ an intent that navigates the user to it.
  
  * Added some minor styling
+ 
+### Day Three
+
+ * Created the db and all associated files
+ 
+ * created a new activity (Exercise Diary) that accesses the db
+    * can read the saved items in db
+    * can add new items to the db
+    
+ * styled the new activity to relatively match the others
+ 
+### Day 4(ish)
+
+ * Created and implemented a recyclerView
+    * view pulls data from the db to fill
+    * can add new entries, which then show up in the new view
+     
