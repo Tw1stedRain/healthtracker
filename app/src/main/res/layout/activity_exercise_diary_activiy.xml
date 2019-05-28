@@ -7,127 +7,91 @@
     android:background="@color/colorPrimary"
     tools:context=".ExerciseDiaryActivity">
 
+    <Button
+        android:id="@+id/send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="29dp"
+        android:background="@color/btnColor"
+        android:onClick="newExercise"
+        android:text="@string/newExercise"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <!--will find a cleaner way of displaying these. for now, assignmet says not to worry about temp text view -->
-    <TextView
-        android:id="@+id/list2"
-        android:layout_width="274dp"
-        android:layout_height="56dp"
+    <Button
+        android:id="@+id/toHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="12dp"
+        android:background="@color/btnColor"
+        android:onClick="goHome"
+        android:text="@string/home"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycle_exercise"
+        android:layout_width="312dp"
+        android:layout_height="192dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/list1" />
-
-    <TextView
-        android:id="@+id/list1"
-        android:layout_width="274dp"
-        android:layout_height="56dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="508dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/description"
+        app:layout_constraintVertical_bias="0.827"
+        tools:itemCount="5" />
 
     <EditText
         android:id="@+id/title"
-        android:layout_width="172dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:autofillHints=""
+        android:layout_marginTop="12dp"
         android:ems="10"
-        android:hint="Exercise Title"
+        android:hint="@string/title"
         android:inputType="textShortMessage|textAutoCorrect"
-        android:text="@string/title"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/send" />
 
     <EditText
         android:id="@+id/quantity"
-        android:layout_width="206dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="96dp"
-        android:autofillHints=""
+        android:layout_marginStart="4dp"
         android:ems="10"
-        android:hint="Number of Reps"
-        android:text="@string/reps"
-        app:layout_constraintStart_toStartOf="parent"
+        android:hint="@string/reps"
+        app:layout_constraintBaseline_toBaselineOf="@+id/time"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/time"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="178dp"
+        android:ems="10"
+        android:hint="@string/time"
+        app:layout_constraintStart_toStartOf="@+id/description"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/description"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="136dp"
-        android:autofillHints=""
+        android:layout_marginTop="28dp"
         android:ems="10"
-        android:hint="Description"
+        android:hint="@string/description"
         android:inputType="textMultiLine"
         android:lines="5"
-        android:text="@string/description"
-        app:layout_constraintBottom_toTopOf="@+id/list1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/title"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <EditText
-        android:id="@+id/time"
-        android:layout_width="190dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="96dp"
-        android:layout_marginEnd="8dp"
-        android:autofillHints=""
-        android:ems="10"
-        android:hint="Created On"
-        android:text="@string/time"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.888"
-        app:layout_constraintStart_toEndOf="@+id/quantity"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/send"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="28dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/btnColor"
-        android:onClick="newExercise"
-        android:text="@string/newExercise"
-        app:layout_constraintBottom_toTopOf="@+id/list1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
-
-    <Button
-        android:id="@+id/toHome"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:background="@color/btnColor"
-        android:onClick="goHome"
-        android:text="@string/home"
-        app:layout_constraintBottom_toTopOf="@+id/list1"
-        app:layout_constraintEnd_toStartOf="@+id/send"
-        app:layout_constraintHorizontal_bias="0.48"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/description" />
+        app:layout_constraintTop_toBottomOf="@+id/quantity" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+

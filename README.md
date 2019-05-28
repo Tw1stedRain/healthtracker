@@ -34,3 +34,10 @@
     * can add new items to the db
     
  * styled the new activity to relatively match the others
+ 
+### Day 4(ish)
+
+ * Created and implemented a recyclerView
+    * view pulls data from the db to fill
+    * can add new entries, which then show up in the new view
+     

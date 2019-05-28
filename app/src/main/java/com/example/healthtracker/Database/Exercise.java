@@ -12,7 +12,7 @@ public class Exercise {
     private long id;
 
     private String title;
-    private String  quantity;
+    private String quantity;
     private String description;
     private String timestamp;
 
@@ -49,11 +49,11 @@ public class Exercise {
         this.title = title;
     }
 
-    public String  getQuantity() {
+    public String getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String  quantity) {
+    public void setQuantity(String quantity) {
         this.quantity = quantity;
     }
 

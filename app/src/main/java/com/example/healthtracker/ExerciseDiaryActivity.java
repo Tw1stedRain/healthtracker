@@ -1,6 +1,8 @@
 package com.example.healthtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.room.Room;
 
 import android.content.Intent;
@@ -12,9 +14,15 @@ import android.widget.TextView;
 import com.example.healthtracker.Database.AppDatabase;
 import com.example.healthtracker.Database.Exercise;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ExerciseDiaryActivity extends AppCompatActivity {
 
     public AppDatabase db;
+    RecyclerView recyclerView;
+    RecyclerView.LayoutManager layoutManager;
+    ExerciseLayoutAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,15 +34,18 @@ public class ExerciseDiaryActivity extends AppCompatActivity {
                 .fallbackToDestructiveMigration()
                 .build();
 
-        Exercise tap = new Exercise("Finger Tap", "52", "Tap as fast as you can!", "today");
-        db.exerciseDao().add(tap);
+        List<Exercise> exercises = db.exerciseDao().getAll();
 
-        Exercise found = db.exerciseDao().findByTitle("Finger Tap");
+        recyclerView = findViewById(R.id.recycle_exercise);
 
-        TextView list = findViewById(R.id.list1);
-        list.setText(found.toString());
+        layoutManager = new LinearLayoutManager(this);
+        recyclerView.setLayoutManager(layoutManager);
+
+        adapter = new ExerciseLayoutAdapter(exercises);
+        recyclerView.setAdapter(adapter);
 
     }
+
 
     public void newExercise(View view) {
         // add to db
@@ -51,11 +62,6 @@ public class ExerciseDiaryActivity extends AppCompatActivity {
         exercise.setTimestamp(time.getText().toString());
 
         db.exerciseDao().add(exercise);
-
-        Exercise found2 = db.exerciseDao().findByTitle(title.getText().toString());
-
-        TextView list2 = findViewById(R.id.list2);
-        list2.setText(found2.toString());
 
     }
 
