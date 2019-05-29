@@ -2,12 +2,13 @@ package com.example.healthtracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class Finger extends AppCompatActivity {
+public class FingerActivity extends AppCompatActivity {
 
     TextView numCounter;
     Button countUp;
@@ -31,6 +32,11 @@ public class Finger extends AppCompatActivity {
                 numCounter.setText(String.valueOf("Count Number: " + counter));
             }
         });
+    }
+
+    public void toHome(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }
 
