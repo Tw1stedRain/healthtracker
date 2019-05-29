@@ -93,5 +93,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/quantity" />
 
+    <TextView
+        android:id="@+id/rest_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/retroBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="430dp" />
+
+    <Button
+        android:id="@+id/retroBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="48dp"
+        android:onClick="onRetrofit"
+        android:text="Spring!"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="412dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 
