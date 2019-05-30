@@ -3,7 +3,6 @@ package com.example.healthtracker;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.healthtracker.Database.Exercise;
@@ -36,7 +35,7 @@ public class ExerciseLayoutAdapter extends RecyclerView.Adapter<ExerciseLayoutAd
             this.textTitle.setText(exercise.getTitle());
             this.textQuantity.setText(exercise.getQuantity());
             this.textDescription.setText(exercise.getDescription());
-            this.textTime.setText(exercise.getTimestamp());
+            this.textTime.setText(exercise.getTimeStamp());
         }
 
 

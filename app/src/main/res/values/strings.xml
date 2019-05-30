@@ -9,6 +9,7 @@
     <string name="intent">To the Finger</string>
     <string name="sliderDescription">Slider of cats</string>
     <string name="diaryBtn">Exercise Diary</string>
+    <string name="toUser">Edit Your Username</string>
 
     <!--finger activity-->
     <string name="finger">WORK OUT THAT FINGER!!!!</string>
@@ -20,4 +21,8 @@
     <string name="description">Description</string>
     <string name="time">Occurred On</string>
     <string name="newExercise">Record New Exercise</string>
+    <string name="spring">Spring!</string>
+
+    <!--username activity-->
+    <string name="usernameBtn">Add Your Username</string>
 </resources>

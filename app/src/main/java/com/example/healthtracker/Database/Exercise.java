@@ -14,18 +14,18 @@ public class Exercise {
     private String title;
     private String quantity;
     private String description;
-    private String timestamp;
+    private String timeStamp;
 
     public Exercise() {
 
     }
 
     @Ignore
-    public Exercise(String title, String quantity, String description, String timestamp) {
+    public Exercise(String title, String quantity, String description, String timeStamp) {
         this.title = title;
         this.quantity = quantity;
         this.description = description;
-        this.timestamp = timestamp;
+        this.timeStamp = timeStamp;
     }
 
     public String toString() {
@@ -65,11 +65,11 @@ public class Exercise {
         this.description = description;
     }
 
-    public String getTimestamp() {
-        return timestamp;
+    public String getTimeStamp() {
+        return timeStamp;
     }
 
-    public void setTimestamp(String timestamp) {
-        this.timestamp = timestamp;
+    public void setTimeStamp(String timeStamp) {
+        this.timeStamp = timeStamp;
     }
 }

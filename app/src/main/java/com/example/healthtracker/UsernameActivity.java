@@ -21,7 +21,7 @@ public class UsernameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_username);
 
         text = findViewById(R.id.text_name);
-        edit = findViewById(R.id.editText);
+        edit = findViewById(R.id.editUsername);
 
         SharedPreferences preferences = PreferencesHelper.getMyFilePreferences(this);
 
