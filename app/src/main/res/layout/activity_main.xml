@@ -13,6 +13,7 @@
         android:layout_width="288dp"
         android:layout_height="402dp"
         android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
         android:layout_marginEnd="8dp"
         android:contentDescription="@string/sliderDescription"
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,22 +33,19 @@
         app:layout_constraintEnd_toEndOf="@+id/slider"
         app:layout_constraintStart_toStartOf="@+id/slider"
         app:layout_constraintTop_toTopOf="@+id/slider"
-        app:layout_constraintVertical_bias="0.926" />
+        app:layout_constraintVertical_bias="0.887" />
 
     <Button
         android:id="@+id/newFinger"
-        android:layout_width="148dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="28dp"
+        android:layout_width="117dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="588dp"
         android:background="@color/btnColor"
-        android:onClick="newPage"
+        android:onClick="fingerExercise"
         android:text="@string/intent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/toUsername"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_name" />
 
     <TextView
         android:id="@+id/tracker"
@@ -55,12 +53,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginBottom="48dp"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/newFinger"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.501"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="556dp" />
 
     <TextView
         android:id="@+id/quotes"
@@ -75,5 +71,42 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+    <Button
+        android:id="@+id/diary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/btnColor"
+        android:onClick="diary"
+        android:text="@string/diaryBtn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toUsername"
+        app:layout_constraintTop_toBottomOf="@+id/slider"
+        app:layout_constraintVertical_bias="0.898" />
+
+    <TextView
+        android:id="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/newFinger"
+        app:layout_constraintEnd_toStartOf="@+id/slider"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/toUsername"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="username"
+        android:text="@string/toUser"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diary"
+        app:layout_constraintStart_toEndOf="@+id/newFinger"
+        app:layout_constraintTop_toBottomOf="@+id/tracker" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
